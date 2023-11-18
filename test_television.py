@@ -58,6 +58,7 @@ def test_volume_up():
     tv.mute()
     tv.volume_up()
     assert tv.__str__() == "Power = True, Channel = 0, Volume = 0"
+    tv.mute()
     for _ in range(1):
         tv.volume_up()
     assert tv.__str__() == "Power = True, Channel = 0, Volume = 0"
@@ -76,6 +77,7 @@ def test_volume_down():
     tv.mute()
     tv.volume_down()
     assert tv.__str__() == "Power = True, Channel = 0, Volume = 0"
+    tv.mute()
     tv.volume_down()
     assert tv.__str__() == "Power = True, Channel = 0, Volume = 2"
 
